@@ -75,57 +75,57 @@ Simply open index.html in your preferred browser (recommended: Chrome/Edge, as t
 
 📜 Supported Commands
 
-Command: Action
+Command --->  Action
 
-hello / hi:	Greets the user
+hello / hi ---> 	Greets the user
 
-who are you:	Introduces Aiva as a virtual assistant
+who are you ---> 	Introduces Aiva as a virtual assistant
 
-what is your name:	Responds with Aiva’s name
+what is your name ---> 	Responds with Aiva’s name
 
-how are you:	Friendly response
+how are you ---> 	Friendly response
 
-what can you do:	Lists Aiva’s capabilities
+what can you do ---> 	Lists Aiva’s capabilities
 
-time:	Reads out the current time
+time ---> 	Reads out the current time
 
-date:	Reads out today’s date
+date ---> 	Reads out today’s date
 
-open youtube:	Opens YouTube in a new tab
+open youtube ---> 	Opens YouTube in a new tab
 
-open google:	Opens Google search
+open google ---> Opens Google search
 
-open gmail:	Opens Gmail
+open gmail ---> 	Opens Gmail
 
-open facebook:	Opens Facebook
+open facebook ---> 	Opens Facebook
 
-open instagram:	Opens Instagram
+open instagram ---> 	Opens Instagram
 
-open twitter:	Opens Twitter
+open twitter ---> 	Opens Twitter
 
 open linkedin:	Opens LinkedIn
 
-open whatsapp:	Opens WhatsApp (depends on browser support)
+open whatsapp ---> 	Opens WhatsApp (depends on browser support)
 
-open spotify:	Opens Spotify
+open spotify ---> 	Opens Spotify
 
-open netflix:	Opens Netflix
+open netflix ---> 	Opens Netflix
 
-open github:	Opens GitHub
+open github ---> 	Opens GitHub
 
-open calculator:	Attempts to open system calculator (may not work on all browsers)
+open calculator ---> 	Attempts to open system calculator (may not work on all browsers)
 
-open settings:	Attempts to open system settings (may not work on all browsers)
+open settings ---> 	Attempts to open system settings (may not work on all browsers)
 
-open camera:	Attempts to open system camera (may not work on all browsers)
+open camera ---> 	Attempts to open system camera (may not work on all browsers)
 
-tell me a joke:	Tells a joke
+tell me a joke ---> 	Tells a joke
 
-thank you:	Responds politely
+thank you ---> 	Responds politely
 
-goodbye:	Says goodbye and closes conversation
+goodbye ---> 	Says goodbye and closes conversation
 
-(Any unrecognized cmd):	Opens a Google search with the spoken phrase (default fallback behavior)
+(Any unrecognized cmd) ---> 	Opens a Google search with the spoken phrase (default fallback behavior)
 
 
 
