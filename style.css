@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./assets/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #d1f2f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: #64f5f9;
+}
+
+p {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+#description {
+  font-size: 1.2rem;
+  color: #d1f2f4;
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 30%;
+}
+
+#btn,
+#btn-start {
+  width: 20%;
+  background: none;
+  border: 2px solid rgba(100, 245, 249, 0.3);
+  border-radius: 25px;
+  color: #d1f2f4;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  transition: all 0.2s;
+  transition-timing-function: linear;
+}
+
+#btn {
+  display: none;
+}
+
+#btn:hover,
+#btn-start:hover {
+  font-size: 1.5rem;
+  border: 2px solid #64f5f9;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgba(100, 245, 249, 0.5);
+}
+
+/* ---- Siri-like voice orb ---- */
+:root {
+  /* your gradient colors */
+  --c1: rgba(139, 131, 214, 1);
+  --c2: rgba(150, 54, 159, 1);
+  --glow: rgba(150, 54, 159, 0.55);
+}
+
+.voice-orb {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  filter: drop-shadow(0 0 16px rgba(0, 0, 0, 0.35));
+  display: none;
+  place-items: center;
+  /* margin-top: 24px; */
+}
+
+.voice-orb.listening .core {
+  animation: breathe 1.8s ease-in-out infinite;
+  box-shadow: 0 0 50px rgba(150, 54, 159, 0.7),
+    0 0 80px rgba(139, 131, 214, 0.5);
+}
+
+.voice-orb.listening .ring {
+  animation: pulse 1.5s ease-out infinite;
+}
+
+/* pulsing rings */
+.voice-orb .ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.8);
+  box-shadow: 0 0 25px var(--glow), inset 0 0 30px var(--glow);
+}
+
+/* inner/core orb with animated gradient */
+.voice-orb .core {
+  width: 72%;
+  height: 72%;
+  border-radius: 50%;
+  background: radial-gradient(
+      60% 60% at 50% 50%,
+      #fff 0%,
+      rgba(255, 255, 255, 0.75) 30%,
+      transparent 65%
+    ),
+    conic-gradient(from 0deg, var(--c1), var(--c2), var(--c1));
+  animation: swirl 4s linear infinite paused,
+    breathe 2.6s ease-in-out infinite paused;
+  box-shadow: 0 0 40px rgba(139, 131, 214, 0.35),
+    0 0 70px rgba(150, 54, 159, 0.25);
+}
+
+/* animate rings when speaking */
+.voice-orb.speaking .ring {
+  animation: pulse 2.2s ease-out infinite;
+}
+.voice-orb.speaking .ring-2 {
+  animation-delay: 0.9s;
+}
+
+/* animate core when speaking */
+.voice-orb.speaking .core {
+  animation-play-state: running;
+}
+
+/* keyframes */
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 40px rgba(139, 131, 214, 0.35),
+      0 0 70px rgba(150, 54, 159, 0.25);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 55px rgba(139, 131, 214, 0.55),
+      0 0 90px rgba(150, 54, 159, 0.4);
+  }
+}
+
+@keyframes swirl {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* respectful to users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .voice-orb .ring,
+  .voice-orb .core {
+    animation: none !important;
+  }
+}

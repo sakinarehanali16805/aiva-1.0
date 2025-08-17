@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aiva 1.0</title>
+    <link
+      rel="icon"
+      href="./assets/logo.png"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Aiva 1.0</h1>
+    <p id="opening-text">Welcome to Aiva, your AI Virtual Assistant.</p>
+    <p id="description">
+      Click the button below &#128071; to start interacting with Aiva. You can
+      ask questions or give commands.
+    </p>
+    <button id="btn-start">Start Assistant</button>
+    <button id="btn">
+      <img src="./assets/microphone.png" alt="microphone" id="mic" />
+      <span id="text">Click to Speak!</span>
+    </button>
+    <!-- <img src="./assets/voice.gif" alt="Aiva Voice Assistant" id="voice" /> -->
+    <div class="voice-orb" aria-hidden="true">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="core"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
